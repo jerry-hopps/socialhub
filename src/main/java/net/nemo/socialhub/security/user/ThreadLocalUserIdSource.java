@@ -1,6 +1,6 @@
-package net.nemo.socialhub.user;
+package net.nemo.socialhub.security.user;
 
-import net.nemo.socialhub.util.SecurityContext;
+import net.nemo.socialhub.security.SecurityContext;
 import org.springframework.social.UserIdSource;
 
 /**

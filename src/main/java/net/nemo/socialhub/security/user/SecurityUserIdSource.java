@@ -1,4 +1,4 @@
-package net.nemo.socialhub.user;
+package net.nemo.socialhub.security.user;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,7 +12,7 @@ public class SecurityUserIdSource implements UserIdSource {
     public String getUserId() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null) {
-            throw new IllegalStateException("Unable to get a ConnectionRepository: no user signed in");
+            throw new IllegalStateException("Unable to get a ConnectionRepository: no security signed in");
         }
         return authentication.getName();
     }

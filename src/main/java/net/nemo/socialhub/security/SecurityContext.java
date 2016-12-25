@@ -1,4 +1,4 @@
-package net.nemo.socialhub.util;
+package net.nemo.socialhub.security;
 
 import net.nemo.socialhub.entity.User;
 
@@ -13,7 +13,7 @@ public final class SecurityContext {
         User user = currentUser.get();
         if (user == null) {
             return new User("anonymous");
-            //throw new IllegalStateException("No user is currently signed in");
+            //throw new IllegalStateException("No security is currently signed in");
         }
         return user;
     }
